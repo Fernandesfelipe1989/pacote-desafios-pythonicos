@@ -14,9 +14,8 @@ a-frente + b-frente + a-trás + b-trás
 
 def front_back(a, b):
     # +++ SUA SOLUÇÃO +++
-    size_a = len(a) // 2 if len(a) % 2 == 0 else (len(a) // 2) + 1
-    size_b = len(b) // 2 if len(b) % 2 == 0 else (len(b) // 2) + 1
-    return "".join([a[:size_a], b[:size_b], a[size_a:], b[size_b:]])
+    width = [len(i) // 2 if len(i) % 2 == 0 else (len(i) // 2) + 1 for i in [a, b]]
+    return "".join([a[:width[0]], b[:width[1]], a[width[0]:], b[width[1]:]])
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
