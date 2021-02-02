@@ -56,6 +56,17 @@ import sys
 
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
+def print_words(filename):
+    text = open(filename, 'r').read().lower()
+    words = text.split()
+    unique_words = set(words)
+    for i in sorted(zip(unique_words, [words.count(word) for word in unique_words])):
+        print(f'{i[0]} {i[1]}')
+
+
+
+def print_top():
+    pass
 
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
