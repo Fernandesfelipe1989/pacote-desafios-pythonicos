@@ -8,9 +8,10 @@ Exemplo: [1, 2, 2, 3]
 Irá retornar: [1, 2, 3]
 """
 
+
 def remove_adjacent(nums):
     # +++ SUA SOLUÇÃO +++
-    return
+    return [nums[i] for i in range(len(nums)) if i == 0 or nums[i - 1] != nums[i]]
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
